@@ -1,0 +1,129 @@
+/* Variables y base */
+:root {
+    --bg-color: #1a1a2e; /* Azul oscuro profundo */
+    --card-bg: #222538;  /* Gris azulado oscuro */
+    --text-color: #e4e4f7;
+    --primary-color: #4CAF50; /* Verde vibrante */
+    --secondary-color: #ff9900;
+    --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Títulos */
+h1, h3 {
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Tarjeta de Formulario */
+.form-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    margin-bottom: 30px;
+    border-top: 3px solid var(--primary-color);
+}
+
+/* Inputs y Textareas */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #3e445b;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #2b2f44;
+    color: var(--text-color);
+    transition: border-color 0.3s;
+}
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Botón de Enviar */
+button {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.1s;
+}
+button:hover {
+    background-color: #6dcc71;
+    transform: translateY(-2px);
+}
+
+/* Lista de Comentarios */
+#comments-list {
+    padding: 0;
+}
+
+/* Tarjetas de Comentario */
+.comment-card {
+    background: var(--card-bg);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.2s;
+    border-left: 5px solid var(--secondary-color);
+}
+.comment-card:hover {
+    transform: translateY(-3px);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1em;
+}
+
+.comment-date {
+    color: #8a8fb0;
+    font-size: 0.85em;
+}
+
+.comment-body {
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 500px) {
+    body {
+        padding: 20px 10px;
+    }
+    .form-card, .comment-card {
+        padding: 20px;
+    }
+}

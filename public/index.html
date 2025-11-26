@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro de Visitas Digital | Moderno</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>✍️ Libro de Visitas Digital</h1>
+        
+        <div class="form-card">
+            <h2 style="margin-top:0; color: var(--secondary-color);">¡Deja tu huella!</h2>
+            <form id="guestbook-form">
+                <input type="text" id="username" placeholder="Tu Nombre (o alias)" required>
+                <textarea id="message" rows="4" placeholder="Escribe tu mensaje o feedback..." required></textarea>
+                <button type="submit">Publicar Mensaje 🚀</button>
+            </form>
+        </div>
+
+        <h3>Últimos Mensajes:</h3>
+        <div id="loading" style="text-align: center; color: #8a8fb0; padding: 20px;">Cargando comentarios...</div>
+        <div id="comments-list"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
